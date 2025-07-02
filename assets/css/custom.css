@@ -12,7 +12,7 @@
   
   /* Centered prose content with optimal reading width */
   .prose-centered {
-    @apply max-w-4xl mx-auto text-left;
+    @apply max-w-4xl mx-auto;
   }
   
   /* Prose content specifically for main content sections */
