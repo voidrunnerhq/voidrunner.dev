@@ -1,0 +1,41 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="60" cy="60" r="58" fill="#f8fafc" stroke="#e2e8f0" stroke-width="4"/>
+  
+  <!-- Face -->
+  <ellipse cx="60" cy="55" rx="25" ry="28" fill="#f4c2a1"/>
+  
+  <!-- Hair -->
+  <path d="M35 45C35 30 45 20 60 20C75 20 85 30 85 45C85 40 85 35 85 32C85 28 80 25 75 25C70 25 65 23 60 23C55 23 50 25 45 25C40 25 35 28 35 32C35 35 35 40 35 45Z" 
+        fill="#2d1b14"/>
+  
+  <!-- Side hair strands -->
+  <path d="M35 45C32 48 30 52 30 56C30 54 32 50 35 48Z" fill="#2d1b14"/>
+  <path d="M85 45C88 48 90 52 90 56C90 54 88 50 85 48Z" fill="#2d1b14"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="52" cy="50" rx="3" ry="4" fill="#1f2937"/>
+  <ellipse cx="68" cy="50" rx="3" ry="4" fill="#1f2937"/>
+  <circle cx="53" cy="49" r="1" fill="white"/>
+  <circle cx="69" cy="49" r="1" fill="white"/>
+  
+  <!-- Eyebrows -->
+  <path d="M48 45C50 43 54 43 56 45" stroke="#2d1b14" stroke-width="2" stroke-linecap="round"/>
+  <path d="M64 45C66 43 70 43 72 45" stroke="#2d1b14" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Nose -->
+  <ellipse cx="60" cy="56" rx="1.5" ry="2" fill="#e8b796"/>
+  
+  <!-- Mouth -->
+  <path d="M56 63C58 66 62 66 64 63" stroke="#d4705a" stroke-width="2" stroke-linecap="round" fill="none"/>
+  
+  <!-- Clothing - Tech professional -->
+  <path d="M35 85C35 80 40 75 45 75L75 75C80 75 85 80 85 85L85 115L35 115Z" fill="#5573df"/>
+  
+  <!-- Collar -->
+  <path d="M45 75L50 85L60 80L70 85L75 75" fill="white"/>
+  
+  <!-- Tech accessory - small earpiece -->
+  <circle cx="75" cy="48" r="2" fill="#6b7280"/>
+  <circle cx="75" cy="48" r="1" fill="#3b82f6"/>
+</svg>

@@ -1,8 +1,12 @@
-PLACEHOLDER: VoidRunner Favicon ICO
-This should be replaced with a proper .ico file containing:
-- 16x16px icon
-- 32x32px icon  
-- 48x48px icon
-Based on the VoidRunner brand icon (blue rounded rectangle with white lines and purple accent)
+PLACEHOLDER: VoidRunner Favicon ICO (16x16, 32x32, 48x48px)
+This should be replaced with a proper .ico file containing multiple sizes based on the VoidRunner icon:
 
-To generate: Use an online ICO generator or design tool to create from the SVG logo icon.
+Design: Blue rounded rectangle with white neural network pattern and purple accent
+- 16x16px: Simplified version with just the blue square and minimal details
+- 32x32px: Include neural network dots and connections
+- 48x48px: Full detail version matching the SVG favicon
+
+To generate: Use favicon.svg as source and convert using:
+- Online ICO generators (favicon.io, realfavicongenerator.net)
+- Design tools (Figma, Sketch, Photoshop)
+- Command line tools (ImageMagick, etc.)

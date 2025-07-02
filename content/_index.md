@@ -107,17 +107,17 @@ testimonials:
   testimonial_list:
     - name: "Sarah Chen"
       designation: "Senior ML Engineer @ TechFlow"
-      avatar: "/images/testimonials/sarah.jpg"
+      avatar: "/images/testimonials/sarah.svg"
       content: "VoidRunner cut our deployment time from 4 hours to 3 minutes. The AI environment detection is incredibly accurate - it understood our complex ML pipeline instantly."
 
     - name: "Marcus Rodriguez"
       designation: "Lead DevOps @ StartupX"
-      avatar: "/images/testimonials/marcus.jpg"
+      avatar: "/images/testimonials/marcus.svg"
       content: "Finally, a platform that just works. No more Dockerfile debugging or Kubernetes YAML wrestling. Our team can focus on shipping features, not infrastructure."
 
     - name: "Dr. Emily Watson"
       designation: "Research Scientist @ AI Labs"
-      avatar: "/images/testimonials/emily.jpg"
+      avatar: "/images/testimonials/emily.svg"
       content: "The automatic dependency resolution saved us weeks of environment setup. VoidRunner handles our research workloads seamlessly."
 
 # Stats section

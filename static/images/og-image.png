@@ -1,8 +1,12 @@
-PLACEHOLDER: Open Graph Social Media Image
-This should be replaced with a 1200x630px PNG image featuring:
-- VoidRunner logo
-- Tagline: "Deploy AI Applications in Minutes, Not Hours"  
-- Clean, professional design with brand colors
-- Optimized for social media sharing (Twitter, LinkedIn, Facebook)
+PLACEHOLDER: Open Graph Social Media Image (1200x630px)
+This should be replaced with a PNG version of the og-image.svg file.
 
-Recommended tools: Canva, Figma, or similar design tools
+Content should include:
+- VoidRunner logo with neural network icon
+- Main headline: "Deploy AI Applications in Minutes, Not Hours"
+- Subtitle about AI-powered platform
+- Code visualization with deployment arrow
+- VoidRunner branding colors (blue to purple gradient background)
+- Professional, modern design optimized for social sharing
+
+To generate: Convert the og-image.svg to PNG using design tools or online converters.
