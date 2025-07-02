@@ -1,6 +1,6 @@
 ---
 title: "Pricing"
-description: "Transparent, usage-based pricing that scales with your success. Start free, pay only for what you use."
+description: "Transparent, task-based pricing that scales with your computational needs. Start free, pay only for what you execute."
 draft: false
 layout: "pricing"
 
@@ -8,7 +8,7 @@ layout: "pricing"
 hero:
   enable: true
   title: "**Transparent Pricing** That Scales With You"
-  subtitle: "Start free, pay only for what you use. No hidden fees, no vendor lock-in, no surprises."
+  subtitle: "Start free, pay only for computational resources consumed. No hidden fees, no vendor lock-in, no surprises."
 
 # Pricing tiers
 pricing_tiers:
@@ -21,7 +21,7 @@ pricing_tiers:
       description: "Perfect for learning, prototyping, and personal projects"
       color: "blue"
       features:
-        - text: "1,000 function executions/month"
+        - text: "1,000 task executions/month"
           included: true
         - text: "10 GB-hours compute time"
           included: true
@@ -56,7 +56,7 @@ pricing_tiers:
       color: "purple"
       popular: true
       features:
-        - text: "50,000 executions included"
+        - text: "50,000 task executions included"
           included: true
         - text: "100 GB-hours compute included"
           included: true
@@ -74,14 +74,14 @@ pricing_tiers:
           included: true
         - text: "Team collaboration (5 seats)"
           included: true
-        - text: "API access"
+        - text: "Task monitoring & logs"
           included: true
-        - text: "Deployment webhooks"
+        - text: "Result retrieval & storage"
           included: true
         - text: "Environment variables"
           included: true
       overages:
-        - text: "$0.20 per 1,000 additional executions"
+        - text: "$0.20 per 1,000 additional task executions"
         - text: "$0.50 per additional GB-hour"
         - text: "$0.10 per additional GB bandwidth"
       button:
@@ -94,7 +94,7 @@ pricing_tiers:
       description: "For teams building production applications"
       color: "green"
       features:
-        - text: "500,000 executions included"
+        - text: "500,000 task executions included"
           included: true
         - text: "1,000 GB-hours compute included"
           included: true
@@ -112,14 +112,14 @@ pricing_tiers:
           included: true
         - text: "Team collaboration (25 seats)"
           included: true
-        - text: "Advanced API features"
+        - text: "Advanced task orchestration"
           included: true
-        - text: "CI/CD integrations"
+        - text: "Workflow integrations"
           included: true
         - text: "Environment management"
           included: true
       overages:
-        - text: "$0.15 per 1,000 additional executions"
+        - text: "$0.15 per 1,000 additional task executions"
         - text: "$0.40 per additional GB-hour"
         - text: "$0.08 per additional GB bandwidth"
       button:
@@ -132,7 +132,7 @@ pricing_tiers:
       description: "For large teams and mission-critical applications"
       color: "gray"
       features:
-        - text: "Custom execution limits"
+        - text: "Custom task execution limits"
           included: true
         - text: "Dedicated compute resources"
           included: true
@@ -150,7 +150,7 @@ pricing_tiers:
           included: true
         - text: "Unlimited team members"
           included: true
-        - text: "Premium API features"
+        - text: "Premium task execution features"
           included: true
         - text: "Custom integrations"
           included: true
@@ -175,7 +175,7 @@ feature_comparison:
   categories:
     - name: "Compute Resources"
       features:
-        - name: "Function Executions"
+        - name: "Task Executions"
           developer: "1,000/month"
           pro: "50,000/month"
           team: "500,000/month"
@@ -185,12 +185,12 @@ feature_comparison:
           pro: "100 GB-hours"
           team: "1,000 GB-hours"
           enterprise: "Unlimited"
-        - name: "Memory per Function"
+        - name: "Memory per Task"
           developer: "512MB - 1GB"
           pro: "512MB - 4GB"
           team: "512MB - 8GB"
           enterprise: "Custom"
-        - name: "Execution Timeout"
+        - name: "Task Execution Timeout"
           developer: "15 minutes"
           pro: "30 minutes"
           team: "60 minutes"
@@ -248,8 +248,8 @@ faq:
   title: "**Frequently Asked Questions**"
 
   questions:
-    - question: "How does usage-based pricing work?"
-      answer: "You're charged based on three main metrics: function executions (each time your code runs), compute time (GB-hours of actual processing), and bandwidth (data transfer). Each plan includes generous limits, and you only pay for usage beyond those limits."
+    - question: "How does task-based pricing work?"
+      answer: "You're charged based on three main metrics: task executions (each time your computational task runs), compute time (GB-hours of actual processing), and bandwidth (data transfer). Each plan includes generous limits, and you only pay for usage beyond those limits."
 
     - question: "What happens if I exceed my plan limits?"
       answer: "Your applications continue running without interruption. You'll be charged the overage rates shown for each plan. You can set spending limits and alerts to avoid unexpected charges."
@@ -261,7 +261,7 @@ faq:
       answer: "Absolutely. Our Developer plan is free forever with generous limits perfect for learning, prototyping, and personal projects. No credit card required to get started."
 
     - question: "What's included in compute time?"
-      answer: "Compute time is measured in GB-hours: the amount of memory allocated to your function multiplied by execution time. A function using 1GB of memory running for 1 hour equals 1 GB-hour."
+      answer: "Compute time is measured in GB-hours: the amount of memory allocated to your task multiplied by execution time. A task using 1GB of memory running for 1 hour equals 1 GB-hour."
 
     - question: "Do you offer academic discounts?"
       answer: "Yes! We provide special pricing for educational institutions and students. Contact our sales team with your academic email for details."
@@ -327,7 +327,7 @@ cost_comparison:
 cta:
   enable: true
   title: "Ready to **Start Building**?"
-  subtitle: "Join thousands of developers who've eliminated infrastructure complexity with transparent, predictable pricing."
+  subtitle: "Join thousands of researchers and engineers who've eliminated distributed computing complexity with transparent, predictable pricing."
   button:
     label: "Start Free Trial"
     link: "https://app.voidrunner.dev/signup"
@@ -338,14 +338,14 @@ cta:
 
 ## Fair, Transparent Pricing
 
-VoidRunner's usage-based pricing ensures you only pay for what you actually use. No hidden fees, no surprise bills, and no vendor lock-in. Our pricing scales with your success, making it perfect for everything from personal projects to enterprise applications.
+VoidRunner's task-based pricing ensures you only pay for computational resources you actually consume. No hidden fees, no surprise bills, and no vendor lock-in. Our pricing scales with your computational needs, making it perfect for everything from research experiments to enterprise workloads.
 
-### Why Usage-Based Pricing?
+### Why Task-Based Pricing?
 
-Traditional cloud providers charge for reserved capacity whether you use it or not. VoidRunner charges based on actual resource consumption:
+Traditional cloud providers charge for reserved capacity whether you use it or not. VoidRunner charges based on actual computational resource consumption:
 
-- **Function Executions**: Pay per request, not per hour
-- **Compute Time**: Charged only while your code is running
+- **Task Executions**: Pay per computational task, not per hour
+- **Compute Time**: Charged only while your task is executing
 - **Bandwidth**: Fair pricing for data transfer
 - **Storage**: Optional persistent storage at competitive rates
 

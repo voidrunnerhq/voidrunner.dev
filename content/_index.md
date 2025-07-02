@@ -1,14 +1,14 @@
 ---
-title: "Deploy AI Applications in Minutes, Not Hours"
-description: "VoidRunner's AI-powered platform automatically detects and sets up runtime environments from just your code. Skip the infrastructure complexity and focus on building."
+title: "Execute Distributed Tasks in Minutes, Not Hours"
+description: "VoidRunner's AI-powered platform automatically detects optimal runtime environments and orchestrates computational workloads. Skip the distributed computing complexity and focus on your tasks."
 draft: false
 layout: "home"
 
 # Hero section
 hero:
   enable: true
-  title: "Deploy AI Applications in **Minutes, Not Hours**"
-  subtitle: "VoidRunner's AI-powered platform automatically detects and sets up runtime environments from just your code. Skip the infrastructure complexity and focus on building."
+  title: "Execute Distributed Tasks in **Minutes, Not Hours**"
+  subtitle: "VoidRunner's AI-powered platform automatically detects optimal runtime environments and orchestrates computational workloads across distributed infrastructure. Skip the complexity and focus on your tasks."
   button:
     enable: true
     label: "Start Free"
@@ -25,100 +25,100 @@ hero:
 # Code example section
 code_demo:
   enable: true
-  title: "From Code to Production in **3 Simple Steps**"
-  subtitle: "Just provide your code and description. Our AI does the rest."
+  title: "From Code to Execution in **3 Simple Steps**"
+  subtitle: "Just provide your task code and description. Our AI orchestrates the execution."
   steps:
-    - title: "1. Submit Your Code"
-      description: "Upload your application code with a simple description"
+    - title: "1. Submit Your Task"
+      description: "Upload your computational task code with a simple description"
       code: |
         ```json
         {
-          "name": "ML Image Classifier",
-          "description": "TensorFlow model for image classification with REST API",
-          "code": "from flask import Flask, request\nimport tensorflow as tf\n\napp = Flask(__name__)\nmodel = tf.keras.models.load_model('model.h5')\n\n@app.route('/predict', methods=['POST'])\ndef predict():\n    # Your ML code here\n    return {'prediction': result}"
+          "name": "Fibonacci Calculator",
+          "description": "Calculate Fibonacci numbers using recursive algorithm",
+          "code": "import math\n\ndef calculate_fibonacci(n):\n    \"\"\"Calculate the nth Fibonacci number\"\"\"\n    if n <= 1:\n        return n\n    return calculate_fibonacci(n-1) + calculate_fibonacci(n-2)\n\n# Calculate and display result\nresult = calculate_fibonacci(20)\nprint(f\"20th Fibonacci number: {result}\")"
         }
         ```
-    - title: "2. AI Environment Detection"
-      description: "Our AI analyzes dependencies and creates optimal container environment"
+    - title: "2. AI Runtime Optimization"
+      description: "Our AI analyzes dependencies and creates optimal execution environment"
       code: |
         ```dockerfile
         FROM python:3.9-slim
         WORKDIR /app
 
-        # AI-detected dependencies
+        # AI-optimized for computational tasks
         COPY requirements.txt .
-        RUN pip install tensorflow==2.13.0 flask==2.3.2
+        RUN pip install numpy==1.24.0
 
         COPY . .
-        EXPOSE 5000
-        CMD ["python", "app.py"]
+        # Optimized for mathematical computation
+        CMD ["python", "fibonacci_calculator.py"]
         ```
-    - title: "3. Deploy & Scale"
-      description: "Instant deployment with automatic scaling and monitoring"
+    - title: "3. Execute & Scale"
+      description: "Instant task execution with automatic resource scaling and monitoring"
       code: |
         ```bash
-        ✅ Environment detected: Python 3.9 + TensorFlow
-        ✅ Container built: ml-classifier-a4f2x:rev-1
-        ✅ Deployed: https://ml-classifier.voidrunner.app
-        ✅ Scaling: 0→3 instances (auto)
+        ✅ Runtime optimized: Python 3.9 + NumPy
+        ✅ Task environment: fibonacci-calc-a4f2x:v1
+        ✅ Executing: Task #12847 (Fibonacci sequence)
+        ✅ Scaling: 1→4 workers (auto)
 
-        📊 Status: Ready (99.9% uptime)
-        🚀 Cold start: <800ms
-        💰 Cost: $0.12/hour
+        📊 Status: Complete (runtime: 1.2s)
+        🚀 Task startup: <300ms
+        💰 Cost: $0.02/task
         ```
 
 # Features section
 features:
   enable: true
-  title: "**Intelligent Infrastructure** That Thinks Like You"
-  subtitle: "Stop wrestling with Docker, Kubernetes, and cloud complexity. VoidRunner's AI understands your code and sets up everything automatically."
+  title: "**Intelligent Task Orchestration** That Thinks Like You"
+  subtitle: "Stop wrestling with distributed computing complexity. VoidRunner's AI understands your tasks and orchestrates optimal execution automatically."
 
   feature_list:
     - icon: "fas fa-brain"
-      title: "AI-Powered Environment Detection"
-      description: "Advanced language models analyze your code to detect dependencies, frameworks, and optimal runtime configurations automatically."
+      title: "AI-Powered Task Analysis"
+      description: "Advanced language models analyze your computational tasks to detect dependencies, frameworks, and optimal execution strategies automatically."
 
     - icon: "fas fa-rocket"
-      title: "Sub-Second Cold Starts"
-      description: "Pre-warmed containers and intelligent caching deliver blazing-fast performance with minimal latency."
+      title: "Sub-Second Task Initialization"
+      description: "Pre-warmed execution environments and intelligent resource allocation deliver blazing-fast task startup with minimal latency."
 
     - icon: "fas fa-shield-alt"
       title: "Enterprise-Grade Security"
       description: "gVisor sandboxing, container isolation, and SOC 2 compliance keep your code and data secure."
 
     - icon: "fas fa-chart-line"
-      title: "Usage-Based Scaling"
-      description: "Pay only for what you use with transparent pricing and automatic scaling that grows with your needs."
+      title: "Dynamic Resource Scaling"
+      description: "Pay only for computational resources consumed with transparent pricing and automatic scaling that adapts to task demands."
 
     - icon: "fas fa-code"
-      title: "Multi-Language Support"
-      description: "Python, Node.js, Go, Java, Rust, and more. If you can code it, we can run it."
+      title: "Multi-Language Task Support"
+      description: "Python, Node.js, Go, Java, Rust, and more. If you can code it, we can execute it at scale."
 
     - icon: "fas fa-cogs"
-      title: "Developer-First API"
-      description: "RESTful APIs, comprehensive SDKs, and detailed documentation designed by developers, for developers."
+      title: "Task-Oriented APIs"
+      description: "RESTful APIs optimized for task submission, monitoring, and result retrieval with comprehensive SDKs and documentation."
 
 # Social proof section
 testimonials:
   enable: true
-  title: "Trusted by **Developers Worldwide**"
-  subtitle: "Join thousands of developers who've eliminated infrastructure headaches"
+  title: "Trusted by **Researchers & Engineers Worldwide**"
+  subtitle: "Join thousands of researchers and engineers who've eliminated distributed computing headaches"
 
   testimonial_list:
     - name: "Sarah Chen"
       designation: "Senior ML Engineer @ TechFlow"
       avatar: "/images/testimonials/sarah.svg"
-      content: "VoidRunner cut our deployment time from 4 hours to 3 minutes. The AI environment detection is incredibly accurate - it understood our complex ML pipeline instantly."
+      content: "VoidRunner cut our batch processing setup from 4 hours to 3 minutes. The AI runtime optimization is incredibly accurate - it understood our complex ML workload instantly."
 
     - name: "Marcus Rodriguez"
-      designation: "Lead DevOps @ StartupX"
+      designation: "Principal Engineer @ StartupX"
       avatar: "/images/testimonials/marcus.svg"
-      content: "Finally, a platform that just works. No more Dockerfile debugging or Kubernetes YAML wrestling. Our team can focus on shipping features, not infrastructure."
+      content: "Finally, a platform that just works. No more distributed computing setup or resource management wrestling. Our team can focus on research algorithms, not infrastructure."
 
     - name: "Dr. Emily Watson"
       designation: "Research Scientist @ AI Labs"
       avatar: "/images/testimonials/emily.svg"
-      content: "The automatic dependency resolution saved us weeks of environment setup. VoidRunner handles our research workloads seamlessly."
+      content: "The automatic dependency resolution saved us weeks of environment setup. VoidRunner handles our computational research tasks seamlessly."
 
 # Stats section
 stats:
@@ -127,16 +127,16 @@ stats:
 
   stat_list:
     - number: "1M+"
-      title: "Functions Deployed"
+      title: "Tasks Executed"
 
     - number: "99.9%"
       title: "Uptime SLA"
 
     - number: "<800ms"
-      title: "Average Cold Start"
+      title: "Average Task Startup"
 
     - number: "50+"
-      title: "Languages Supported"
+      title: "Languages & Frameworks"
 
 # Pricing preview
 pricing_preview:
@@ -149,7 +149,7 @@ pricing_preview:
       price: "Free"
       description: "Perfect for learning and small projects"
       features:
-        - "1,000 function executions/month"
+        - "1,000 task executions/month"
         - "10 GB-hours compute time"
         - "5GB bandwidth"
         - "Community support"
@@ -162,7 +162,7 @@ pricing_preview:
       price_period: "/month"
       description: "For professional developers and growing projects"
       features:
-        - "50,000 executions included"
+        - "50,000 task executions included"
         - "100 GB-hours compute"
         - "100GB bandwidth"
         - "Email support"
@@ -176,7 +176,7 @@ pricing_preview:
       price: "Custom"
       description: "For teams and large-scale applications"
       features:
-        - "Unlimited executions"
+        - "Unlimited task executions"
         - "Custom SLAs"
         - "Dedicated support"
         - "Advanced security"
@@ -188,10 +188,10 @@ pricing_preview:
 # CTA section
 cta:
   enable: true
-  title: "Ready to **Deploy Smarter**?"
-  subtitle: "Join thousands of developers who've eliminated infrastructure complexity with VoidRunner."
+  title: "Ready to **Execute Smarter**?"
+  subtitle: "Join thousands of researchers and engineers who've eliminated distributed computing complexity with VoidRunner."
   button:
-    label: "Start Building for Free"
+    label: "Start Executing for Free"
     link: "https://app.voidrunner.dev/signup"
   button_alt:
     label: "Schedule Demo"
@@ -200,22 +200,22 @@ cta:
 
 <!-- Custom sections can be added here -->
 
-## Why Developers Choose VoidRunner
+## Why Researchers & Engineers Choose VoidRunner
 
-Traditional deployment workflows are broken. You spend more time configuring environments than building features. VoidRunner fixes this with AI-powered automation that understands your code and sets up everything perfectly, every time.
+Traditional distributed computing workflows are broken. You spend more time configuring environments than running computational tasks. VoidRunner fixes this with AI-powered automation that understands your tasks and orchestrates execution perfectly, every time.
 
-### The Old Way: Infrastructure Hell
+### The Old Way: Distributed Computing Hell
 
-- Manual Dockerfile creation and debugging
-- Complex Kubernetes YAML configurations
-- Hours of environment troubleshooting
-- Unpredictable deployment failures
-- Expensive DevOps overhead
+- Manual environment setup and debugging
+- Complex cluster configuration and management
+- Hours of distributed system troubleshooting
+- Unpredictable task execution failures
+- Expensive infrastructure overhead
 
-### The VoidRunner Way: AI-Powered Simplicity
+### The VoidRunner Way: AI-Powered Task Execution
 
-- Submit code + description → Instant deployment
-- Automatic dependency detection and resolution
-- Zero-config container optimization
-- Predictable, usage-based pricing
-- Focus on features, not infrastructure
+- Submit task + description → Instant execution
+- Automatic dependency detection and optimization
+- Zero-config execution environment optimization
+- Predictable, task-based pricing
+- Focus on computation, not infrastructure

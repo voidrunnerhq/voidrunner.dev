@@ -1,6 +1,6 @@
 baseURL: 'https://voidrunner.dev'
 languageCode: 'en-us'
-title: 'VoidRunner - AI-Powered Serverless Development Platform'
+title: 'VoidRunner - AI-Powered Distributed Task Execution Platform'
 theme: 'hugo-saasify-theme'
 
 # Hugo configuration
@@ -62,8 +62,8 @@ taxonomies:
 params:
   # Site identity
   author: "VoidRunner Team"
-  description: "Deploy AI applications in minutes, not hours. VoidRunner's AI-powered platform automatically detects and sets up runtime environments from just your code."
-  keywords: ["AI", "serverless", "development platform", "deployment", "containers", "kubernetes"]
+  description: "Execute distributed tasks in minutes, not hours. VoidRunner's AI-powered platform automatically detects optimal runtime environments and orchestrates computational workloads across distributed infrastructure."
+  keywords: ["AI", "distributed computing", "task execution", "batch processing", "computational workloads", "job orchestration"]
   
   # Logo and branding
   logo: "/images/logo.svg"
@@ -100,7 +100,7 @@ params:
   
   # Footer
   footer:
-    content: "Deploy smarter, not harder. VoidRunner's AI-powered platform eliminates infrastructure complexity."
+    content: "Execute smarter, not harder. VoidRunner's AI-powered platform eliminates distributed computing complexity."
     copyright: "© 2025 VoidRunner. All rights reserved."
 
 # Menu configuration

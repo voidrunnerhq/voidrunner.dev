@@ -1,14 +1,14 @@
 ---
 title: "Features"
-description: "Discover how VoidRunner's AI-powered platform eliminates infrastructure complexity and accelerates your development workflow."
+description: "Discover how VoidRunner's AI-powered platform eliminates distributed computing complexity and accelerates your computational workflows."
 draft: false
 layout: "features"
 
 # Hero section
 hero:
   enable: true
-  title: "**Intelligent Infrastructure** for Modern Developers"
-  subtitle: "VoidRunner combines cutting-edge AI with enterprise-grade infrastructure to deliver the ultimate developer experience."
+  title: "**Intelligent Task Orchestration** for Modern Computing"
+  subtitle: "VoidRunner combines cutting-edge AI with enterprise-grade distributed computing to deliver the ultimate task execution experience."
   image: "/images/features-hero.png"
 
 # Core features
@@ -18,37 +18,37 @@ core_features:
 
   features:
     - icon: "fas fa-brain"
-      title: "AI Environment Detection"
-      description: "Our advanced language models analyze your code structure, imports, and dependencies to automatically detect the optimal runtime environment. No more manual Dockerfile creation or dependency hunting."
+      title: "AI Task Environment Detection"
+      description: "Our advanced language models analyze your task structure, imports, and dependencies to automatically detect the optimal execution environment. No more manual environment setup or dependency hunting."
       image: "/images/features/ai-detection.png"
       details:
-        - "Multi-language AST analysis"
+        - "Multi-language task analysis"
         - "Dependency graph resolution"
-        - "Framework-specific optimizations"
+        - "Task-specific optimizations"
         - "Version conflict detection"
         - "Security vulnerability scanning"
 
     - icon: "fas fa-container-storage"
-      title: "Zero-Config Containerization"
-      description: "Skip the Docker complexity. VoidRunner generates optimized, secure containers automatically with multi-stage builds, minimal attack surfaces, and production-ready configurations."
+      title: "Zero-Config Task Execution"
+      description: "Skip the distributed computing complexity. VoidRunner generates optimized, secure execution environments automatically with resource optimization, security isolation, and task-ready configurations."
       image: "/images/features/containerization.png"
       details:
-        - "Multi-stage build optimization"
-        - "Distroless base images"
-        - "Automatic layer caching"
+        - "Multi-stage execution optimization"
+        - "Minimal execution environments"
+        - "Automatic resource caching"
         - "Security best practices"
         - "Size optimization"
 
     - icon: "fas fa-rocket"
-      title: "Lightning-Fast Deployments"
-      description: "Deploy in seconds, not minutes. Pre-warmed containers, intelligent caching, and global edge distribution deliver sub-second cold starts and instant scaling."
+      title: "Lightning-Fast Task Execution"
+      description: "Execute tasks in seconds, not minutes. Pre-warmed environments, intelligent caching, and distributed resource allocation deliver sub-second startup and instant scaling."
       image: "/images/features/fast-deploy.png"
       details:
-        - "Sub-800ms cold starts"
-        - "Global edge deployment"
-        - "Intelligent pre-warming"
-        - "Instant horizontal scaling"
-        - "Zero-downtime updates"
+        - "Sub-500ms task startup"
+        - "Global distributed execution"
+        - "Intelligent resource pre-allocation"
+        - "Instant task parallelization"
+        - "Zero-interruption task migration"
 
 # Technical specifications
 technical_specs:
@@ -92,10 +92,10 @@ technical_specs:
 
     - category: "Performance"
       items:
-        - "99.9% uptime SLA"
-        - "<800ms average cold start"
-        - "Auto-scaling from 0 to 1000+ instances"
-        - "Global CDN with edge caching"
+        - "99.9% task success rate"
+        - "<500ms average task startup"
+        - "Auto-scaling from 1 to 1000+ workers"
+        - "Global distributed execution with smart caching"
         - "Real-time metrics and alerting"
         - "Custom performance monitoring"
         - "Cost optimization recommendations"
@@ -104,67 +104,67 @@ technical_specs:
 # Developer experience
 developer_experience:
   enable: true
-  title: "**Developer Experience** First"
-  subtitle: "Built by developers, for developers. Every feature designed to eliminate friction and accelerate delivery."
+  title: "**Computational Experience** First"
+  subtitle: "Built by researchers, for computational workloads. Every feature designed to eliminate friction and accelerate task execution."
 
   features:
-    - title: "Intuitive APIs"
-      description: "RESTful APIs with comprehensive SDKs for Python, Node.js, Go, and more. Detailed documentation with interactive examples."
+    - title: "Task-Oriented APIs"
+      description: "RESTful APIs optimized for task submission, monitoring, and result retrieval. Comprehensive SDKs for Python, Node.js, Go, and more with detailed documentation."
       icon: "fas fa-code"
 
     - title: "Real-Time Monitoring"
       description: "Built-in observability with metrics, logs, and traces. Custom dashboards and alerting for proactive monitoring."
       icon: "fas fa-chart-line"
 
-    - title: "CI/CD Integration"
-      description: "Seamless integration with GitHub Actions, GitLab CI, and other popular CI/CD platforms. Deploy on every commit."
+    - title: "Workflow Integration"
+      description: "Seamless integration with research workflows, data pipelines, and computational platforms. Execute tasks on data updates or schedule."
       icon: "fas fa-sync"
 
-    - title: "Local Development"
-      description: "CLI tools and local development servers that mirror production environments. Test locally, deploy globally."
+    - title: "Local Testing"
+      description: "CLI tools and local testing environments that mirror distributed execution. Test locally, execute globally."
       icon: "fas fa-laptop-code"
 
 # Use cases
 use_cases:
   enable: true
-  title: "**Perfect For** Every Development Scenario"
+  title: "**Perfect For** Every Computational Scenario"
 
   cases:
-    - title: "Machine Learning & AI"
-      description: "Deploy ML models, data pipelines, and AI applications with automatic GPU provisioning and dependency management."
+    - title: "Machine Learning & AI Tasks"
+      description: "Execute ML training, inference tasks, and AI workflows with automatic GPU provisioning and dependency management."
       icon: "fas fa-robot"
       examples:
-        - "TensorFlow and PyTorch models"
-        - "Data processing pipelines"
-        - "Computer vision APIs"
-        - "Natural language processing"
+        - "TensorFlow and PyTorch training jobs"
+        - "Batch data processing tasks"
+        - "Computer vision batch processing"
+        - "NLP batch processing tasks"
 
-    - title: "Web Applications"
-      description: "Full-stack applications, APIs, and microservices with automatic scaling and load balancing."
+    - title: "Data & Analytics Workloads"
+      description: "ETL pipelines, data processing jobs, and analytics workloads with automatic resource scaling and optimization."
       icon: "fas fa-globe"
-      examples:
-        - "React and Vue.js frontends"
-        - "Express and FastAPI backends"
-        - "REST and GraphQL APIs"
-        - "Microservices architectures"
-
-    - title: "Data & Analytics"
-      description: "ETL pipelines, data processing jobs, and analytics dashboards with automatic resource scaling."
-      icon: "fas fa-chart-bar"
       examples:
         - "ETL data pipelines"
         - "Batch processing jobs"
-        - "Real-time analytics"
-        - "Business intelligence dashboards"
+        - "Real-time data processing"
+        - "Business intelligence tasks"
 
-    - title: "Research & Education"
-      description: "Academic research, prototyping, and educational projects with generous free tiers and academic discounts."
+    - title: "Scientific Computing"
+      description: "Scientific simulations, computational research, and high-performance computing tasks with automatic resource scaling."
+      icon: "fas fa-chart-bar"
+      examples:
+        - "Scientific simulations"
+        - "Computational modeling"
+        - "Mathematical computations"
+        - "Research workloads"
+
+    - title: "Batch Processing & Automation"
+      description: "Automated batch jobs, scheduled tasks, and background processing with intelligent resource allocation and cost optimization."
       icon: "fas fa-graduation-cap"
       examples:
-        - "Research experiments"
-        - "Student projects"
-        - "Prototypes and MVPs"
-        - "Educational demonstrations"
+        - "Scheduled batch jobs"
+        - "Background processing tasks"
+        - "Automated workflows"
+        - "Data pipeline automation"
 
 # Integration ecosystem
 integrations:
@@ -212,16 +212,16 @@ getting_started:
 # CTA
 cta:
   enable: true
-  title: "Ready to **Eliminate Infrastructure Complexity**?"
-  subtitle: "Join thousands of developers building better applications with VoidRunner"
+  title: "Ready to **Eliminate Distributed Computing Complexity**?"
+  subtitle: "Join thousands of researchers and engineers executing computational tasks with VoidRunner"
   button:
-    label: "Start Building for Free"
+    label: "Start Executing for Free"
     link: "https://app.voidrunner.dev/signup"
   button_alt:
     label: "Schedule a Demo"
     link: "/contact/"
 ---
 
-VoidRunner transforms how developers deploy applications by combining artificial intelligence with enterprise-grade infrastructure. Our platform automatically detects runtime environments, optimizes containers, and scales applications - all without manual configuration.
+VoidRunner transforms how researchers and engineers execute computational tasks by combining artificial intelligence with enterprise-grade distributed computing. Our platform automatically detects runtime environments, optimizes execution, and scales workloads - all without manual configuration.
 
-Whether you're building ML models, web applications, or data pipelines, VoidRunner eliminates the complexity of modern infrastructure while maintaining the security and performance your applications demand.
+Whether you're running ML training, scientific simulations, or data processing tasks, VoidRunner eliminates the complexity of distributed computing while maintaining the security and performance your computational workloads demand.
