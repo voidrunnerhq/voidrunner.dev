@@ -3,14 +3,14 @@
 {{/* Hero Section */}}
 {{ with .Params.hero }}
 {{ if .enable }}
-<section class="section bg-gradient-to-b from-blue-50 to-white">
-    <div class="container">
-        <div class="text-center max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-900 mb-6 leading-tight">
+<section class="section-content bg-gradient-to-b from-blue-50 to-white">
+    <div class="container-consistent">
+        <div class="text-center reading-width-wide">
+            <h1 class="responsive-title">
                 {{ .title | markdownify }}
             </h1>
             {{ with .subtitle }}
-            <p class="text-xl text-gray-600 leading-relaxed">
+            <p class="responsive-subtitle">
                 {{ . }}
             </p>
             {{ end }}
@@ -23,8 +23,8 @@
 {{/* Pricing Tiers */}}
 {{ with .Params.pricing_tiers }}
 {{ if .enable }}
-<section class="section bg-white">
-    <div class="container">
+<section class="section-content bg-white">
+    <div class="container-consistent">
         {{ with .tiers }}
         <div class="grid gap-8 lg:grid-cols-4">
             {{ range $tier := . }}
@@ -100,7 +100,7 @@
 {{ with .Params.feature_comparison }}
 {{ if .enable }}
 <section class="section bg-gray-50">
-    <div class="container">
+    <div class="container-consistent">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
                 {{ .title | markdownify }}
@@ -211,8 +211,8 @@
 {{/* FAQ Section */}}
 {{ with .Params.faq }}
 {{ if .enable }}
-<section class="section bg-white">
-    <div class="container">
+<section class="section-content bg-white">
+    <div class="container-consistent">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
                 {{ .title | markdownify }}
@@ -242,8 +242,8 @@
 {{ end }}
 
 {{/* Main Content */}}
-<div class="container mx-auto px-4 py-16">
-    <div class="prose max-w-none">
+<div class="container-consistent">
+    <div class="prose prose-main-content">
         {{ .Content }}
     </div>
 </div>
