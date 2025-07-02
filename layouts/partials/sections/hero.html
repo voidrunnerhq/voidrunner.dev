@@ -1,0 +1,87 @@
+<!-- Hero Section -->
+<section class="section bg-gradient-to-b from-blue-50 to-white">
+    <div class="container">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            <!-- Text Content -->
+            <div class="lg:w-1/2 space-y-8">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-900 leading-tight">
+                    {{ .title | markdownify }}
+                </h1>
+                {{ with .subtitle }}
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    {{ . }}
+                </p>
+                {{ end }}
+                
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    {{ with .button }}
+                    {{ if .enable }}
+                    <a href="{{ .link }}" class="btn-primary inline-flex items-center justify-center">
+                        {{ .label }}
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    {{ end }}
+                    {{ end }}
+                    
+                    {{ with .button_alt }}
+                    {{ if .enable }}
+                    <a href="{{ .link }}" class="btn-outline inline-flex items-center justify-center">
+                        <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M12 5v.01M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/>
+                        </svg>
+                        {{ .label }}
+                    </a>
+                    {{ end }}
+                    {{ end }}
+                </div>
+                
+                <!-- Video -->
+                {{ with .video }}
+                {{ if .enable }}
+                <div class="mt-8">
+                    <div class="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
+                        <iframe 
+                            src="https://www.youtube.com/embed/{{ .youtube_id }}" 
+                            title="VoidRunner Demo"
+                            class="absolute inset-0 w-full h-full"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+            
+            <!-- Image -->
+            <div class="lg:w-1/2">
+                {{ with .image }}
+                <div class="relative">
+                    <img 
+                        src="{{ . }}" 
+                        alt="VoidRunner Dashboard" 
+                        class="w-full h-auto rounded-lg shadow-2xl"
+                    >
+                    <!-- Floating elements for visual interest -->
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-primary-500 rounded-full opacity-10 animate-bounce"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary-500 rounded-full opacity-10 animate-pulse"></div>
+                </div>
+                {{ else }}
+                <!-- Placeholder if no image -->
+                <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg p-12 text-center">
+                    <div class="w-24 h-24 mx-auto bg-primary-500 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-600 font-medium">VoidRunner Dashboard</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

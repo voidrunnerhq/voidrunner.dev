@@ -1,0 +1,221 @@
+{{ define "main" }}
+
+{{/* Hero Section */}}
+{{ with .Params.hero }}
+{{ if .enable }}
+<section class="section bg-gradient-to-b from-blue-50 to-white">
+    <div class="container">
+        <div class="text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-900 mb-6 leading-tight">
+                {{ .title | markdownify }}
+            </h1>
+            {{ with .subtitle }}
+            <p class="text-xl text-gray-600 leading-relaxed">
+                {{ . }}
+            </p>
+            {{ end }}
+            {{ with .image }}
+            <div class="mt-12">
+                <img src="{{ . }}" alt="Features" class="w-full max-w-3xl mx-auto rounded-lg shadow-xl">
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{/* Core Features */}}
+{{ with .Params.core_features }}
+{{ if .enable }}
+<section class="section bg-white">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+                {{ .title | markdownify }}
+            </h2>
+        </div>
+        
+        {{ with .features }}
+        <div class="space-y-24">
+            {{ range $index, $feature := . }}
+            <div class="flex flex-col lg:flex-row items-center gap-12 {{ if and (ne $index 0) (eq (mod $index 2) 1) }}lg:flex-row-reverse{{ end }}">
+                <!-- Content -->
+                <div class="lg:w-1/2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="{{ .icon }} text-2xl text-primary-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-gray-900">
+                            {{ .title }}
+                        </h3>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        {{ .description }}
+                    </p>
+                    {{ with .details }}
+                    <ul class="space-y-2">
+                        {{ range . }}
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">{{ . }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </div>
+                
+                <!-- Image -->
+                <div class="lg:w-1/2">
+                    {{ with .image }}
+                    <img src="{{ . }}" alt="{{ $feature.title }}" class="w-full rounded-lg shadow-lg">
+                    {{ else }}
+                    <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-lg p-12 text-center">
+                        <i class="{{ $feature.icon }} text-6xl text-primary-500 mb-4"></i>
+                        <p class="text-gray-600 font-medium">{{ $feature.title }}</p>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{/* Technical Specifications */}}
+{{ with .Params.technical_specs }}
+{{ if .enable }}
+<section class="section bg-gray-50">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+                {{ .title | markdownify }}
+            </h2>
+            {{ with .subtitle }}
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                {{ . }}
+            </p>
+            {{ end }}
+        </div>
+        
+        {{ with .specs }}
+        <div class="grid gap-8 lg:grid-cols-2">
+            {{ range . }}
+            <div class="card">
+                <h3 class="text-xl font-heading font-bold text-gray-900 mb-6">{{ .category }}</h3>
+                <ul class="space-y-3">
+                    {{ range .items }}
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-primary-500 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span class="text-gray-700">{{ . }}</span>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{/* Developer Experience */}}
+{{ with .Params.developer_experience }}
+{{ if .enable }}
+<section class="section bg-white">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+                {{ .title | markdownify }}
+            </h2>
+            {{ with .subtitle }}
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                {{ . }}
+            </p>
+            {{ end }}
+        </div>
+        
+        {{ with .features }}
+        <div class="feature-grid">
+            {{ range . }}
+            <div class="card text-center">
+                <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <i class="{{ .icon }} text-3xl text-primary-500"></i>
+                </div>
+                <h3 class="text-xl font-heading font-bold text-gray-900 mb-4">{{ .title }}</h3>
+                <p class="text-gray-600">{{ .description }}</p>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{/* Use Cases */}}
+{{ with .Params.use_cases }}
+{{ if .enable }}
+<section class="section bg-gray-50">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+                {{ .title | markdownify }}
+            </h2>
+        </div>
+        
+        {{ with .cases }}
+        <div class="grid gap-8 lg:grid-cols-2">
+            {{ range . }}
+            <div class="card">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                        <i class="{{ .icon }} text-2xl text-primary-500"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-gray-900">{{ .title }}</h3>
+                </div>
+                <p class="text-gray-600 mb-6">{{ .description }}</p>
+                {{ with .examples }}
+                <ul class="space-y-2">
+                    {{ range . }}
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-gray-700 text-sm">{{ . }}</span>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{/* CTA Section */}}
+{{ with .Params.cta }}
+{{ if .enable }}
+{{ partial "sections/cta" . }}
+{{ end }}
+{{ end }}
+
+{{/* Main Content */}}
+<div class="container mx-auto px-4 py-16">
+    <div class="prose max-w-none">
+        {{ .Content }}
+    </div>
+</div>
+
+{{ end }}

@@ -1,0 +1,26 @@
+<!-- Stats Section -->
+<section class="section bg-primary-600">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                {{ .title | markdownify }}
+            </h2>
+        </div>
+        
+        <!-- Stats Grid -->
+        {{ with .stat_list }}
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {{ range . }}
+            <div class="text-center">
+                <div class="text-4xl md:text-5xl font-heading font-bold text-white mb-2">
+                    {{ .number }}
+                </div>
+                <div class="text-lg text-primary-100">
+                    {{ .title }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

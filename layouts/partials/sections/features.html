@@ -1,0 +1,39 @@
+<!-- Features Section -->
+<section class="section bg-gray-50">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+                {{ .title | markdownify }}
+            </h2>
+            {{ with .subtitle }}
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                {{ . }}
+            </p>
+            {{ end }}
+        </div>
+        
+        <!-- Feature Grid -->
+        {{ with .feature_list }}
+        <div class="feature-grid">
+            {{ range . }}
+            <div class="card group hover:shadow-lg transition-all duration-300">
+                <!-- Icon -->
+                <div class="mb-6">
+                    <div class="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-500 transition-colors duration-300">
+                        <i class="{{ .icon }} text-2xl text-primary-500 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <h3 class="text-xl font-heading font-bold text-gray-900 mb-4">
+                    {{ .title }}
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                    {{ .description }}
+                </p>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

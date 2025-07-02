@@ -1,0 +1,52 @@
+<!-- Testimonials Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+                {{ .title | markdownify }}
+            </h2>
+            {{ with .subtitle }}
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                {{ . }}
+            </p>
+            {{ end }}
+        </div>
+        
+        <!-- Testimonials Grid -->
+        {{ with .testimonial_list }}
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {{ range . }}
+            <div class="card">
+                <!-- Quote -->
+                <div class="mb-6">
+                    <svg class="w-8 h-8 text-primary-500 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <p class="text-gray-700 leading-relaxed">
+                        "{{ .content }}"
+                    </p>
+                </div>
+                
+                <!-- Author -->
+                <div class="flex items-center">
+                    <!-- Avatar -->
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center mr-4">
+                        {{ if .avatar }}
+                        <img src="{{ .avatar }}" alt="{{ .name }}" class="w-full h-full rounded-full object-cover">
+                        {{ else }}
+                        <span class="text-white font-bold text-lg">{{ substr .name 0 1 }}</span>
+                        {{ end }}
+                    </div>
+                    
+                    <!-- Info -->
+                    <div>
+                        <div class="font-semibold text-gray-900">{{ .name }}</div>
+                        <div class="text-sm text-gray-600">{{ .designation }}</div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

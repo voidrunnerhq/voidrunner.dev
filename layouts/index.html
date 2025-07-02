@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+{{/* Hero Section */}}
+{{ with .Params.hero }}
+{{ if .enable }}
+{{ partial "sections/hero" . }}
+{{ end }}
+{{ end }}
+
+{{/* Code Demo Section */}}
+{{ with .Params.code_demo }}
+{{ if .enable }}
+{{ partial "sections/code-demo" . }}
+{{ end }}
+{{ end }}
+
+{{/* Features Section */}}
+{{ with .Params.features }}
+{{ if .enable }}
+{{ partial "sections/features" . }}
+{{ end }}
+{{ end }}
+
+{{/* Testimonials Section */}}
+{{ with .Params.testimonials }}
+{{ if .enable }}
+{{ partial "sections/testimonials" . }}
+{{ end }}
+{{ end }}
+
+{{/* Stats Section */}}
+{{ with .Params.stats }}
+{{ if .enable }}
+{{ partial "sections/stats" . }}
+{{ end }}
+{{ end }}
+
+{{/* Pricing Preview Section */}}
+{{ with .Params.pricing_preview }}
+{{ if .enable }}
+{{ partial "sections/pricing-preview" . }}
+{{ end }}
+{{ end }}
+
+{{/* CTA Section */}}
+{{ with .Params.cta }}
+{{ if .enable }}
+{{ partial "sections/cta" . }}
+{{ end }}
+{{ end }}
+
+{{/* Main Content */}}
+<div class="container mx-auto px-4 py-16">
+    <div class="prose max-w-none">
+        {{ .Content }}
+    </div>
+</div>
+
+{{ end }}

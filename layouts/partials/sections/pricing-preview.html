@@ -1,0 +1,65 @@
+<!-- Pricing Preview Section -->
+<section class="section bg-gray-50">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+                {{ .title | markdownify }}
+            </h2>
+            {{ with .subtitle }}
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                {{ . }}
+            </p>
+            {{ end }}
+        </div>
+        
+        <!-- Pricing Cards -->
+        {{ with .plans }}
+        <div class="grid gap-8 lg:grid-cols-3">
+            {{ range . }}
+            <div class="card relative {{ if .popular }}ring-2 ring-primary-500 scale-105{{ end }}">
+                {{ if .popular }}
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span class="bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </span>
+                </div>
+                {{ end }}
+                
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-heading font-bold text-gray-900 mb-2">{{ .name }}</h3>
+                    <div class="mb-4">
+                        <span class="text-4xl font-bold text-primary-600">{{ .price }}</span>
+                        {{ with .price_period }}
+                        <span class="text-gray-600">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    <p class="text-gray-600">{{ .description }}</p>
+                </div>
+                
+                <!-- Features -->
+                {{ with .features }}
+                <ul class="space-y-3 mb-8">
+                    {{ range . }}
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span class="text-gray-700">{{ . }}</span>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+                
+                <!-- Button -->
+                {{ with .button }}
+                <a href="{{ .link }}" class="w-full {{ if $.popular }}btn-primary{{ else }}btn-outline{{ end }} text-center">
+                    {{ .label }}
+                </a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
