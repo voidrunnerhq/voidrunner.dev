@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS overrides for VoidRunner responsive design improvements */
+
+@layer components {
+  /* Override theme's problematic prose max-width setting */
+  .prose {
+    @apply max-w-4xl mx-auto;
+  }
+  
+  /* Ensure optimal reading line length for different screen sizes */
+  .prose-content {
+    @apply max-w-prose mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Responsive text containers with optimal reading widths */
+  .text-container {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .text-container-narrow {
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .text-container-wide {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Responsive typography improvements */
+  .responsive-text {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+  
+  .responsive-text-sm {
+    @apply text-sm sm:text-base leading-relaxed;
+  }
+  
+  .responsive-title {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight;
+  }
+  
+  .responsive-subtitle {
+    @apply text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed;
+  }
+  
+  /* Ensure consistent section spacing */
+  .section-content {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+  
+  /* Hero section responsive improvements */
+  .hero-text {
+    @apply max-w-2xl mx-auto lg:mx-0 lg:max-w-none;
+  }
+  
+  /* Feature section responsive improvements */
+  .feature-subtitle {
+    @apply max-w-3xl mx-auto text-center;
+  }
+}
+
+/* Specific fixes for inconsistent containers */
+@layer utilities {
+  /* Ensure consistent padding across containers */
+  .container-consistent {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  /* Optimal reading width for content */
+  .reading-width {
+    @apply max-w-3xl mx-auto;
+  }
+  
+  .reading-width-wide {
+    @apply max-w-4xl mx-auto;
+  }
+  
+  .reading-width-narrow {
+    @apply max-w-2xl mx-auto;
+  }
+}

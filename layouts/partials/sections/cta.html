@@ -1,12 +1,12 @@
 <!-- CTA Section -->
-<section class="section bg-gradient-to-r from-primary-600 to-secondary-600">
-    <div class="container">
-        <div class="text-center max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
+<section class="section-content bg-gradient-to-r from-primary-600 to-secondary-600">
+    <div class="container-consistent">
+        <div class="text-center reading-width-wide">
+            <h2 class="responsive-title text-white mb-6">
                 {{ .title | markdownify }}
             </h2>
             {{ with .subtitle }}
-            <p class="text-xl text-primary-100 mb-10 leading-relaxed">
+            <p class="responsive-subtitle text-primary-100 mb-10">
                 {{ . }}
             </p>
             {{ end }}

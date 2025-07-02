@@ -73,6 +73,16 @@
         {{ $css = $css | minify | fingerprint | resources.PostProcess }}
     {{ end }}
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    
+    <!-- Custom CSS for responsive design improvements -->
+    {{ $customCSS := resources.Get "css/custom.css" }}
+    {{ if $customCSS }}
+        {{ $customCSS = $customCSS | css.PostCSS }}
+        {{ if hugo.IsProduction }}
+            {{ $customCSS = $customCSS | minify | fingerprint | resources.PostProcess }}
+        {{ end }}
+        <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
+    {{ end }}
 
     <!-- Additional Meta Tags from Front Matter -->
     {{ with .Params.customMeta }}
