@@ -1,0 +1,16 @@
+name = "voidrunner-landing"
+compatibility_date = "2025-07-02"
+
+[env.production]
+vars = { HUGO_ENV = "production", HUGO_BASEURL = "https://voidrunner.dev" }
+
+[env.preview]
+vars = { HUGO_ENV = "development", HUGO_BASEURL = "/" }
+
+# Build configuration for Cloudflare Pages
+# Set in Cloudflare Pages dashboard:
+# Build command: hugo --minify --gc --cleanDestinationDir
+# Build output directory: public
+# Environment variables:
+#   HUGO_VERSION = 0.134.3
+#   NODE_VERSION = 22

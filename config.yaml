@@ -1,0 +1,159 @@
+baseURL: 'https://voidrunner.dev'
+languageCode: 'en-us'
+title: 'VoidRunner - AI-Powered Serverless Development Platform'
+theme: 'hugo-saasify-theme'
+
+# Hugo configuration
+buildDrafts: false
+buildFuture: false
+canonifyURLs: false
+disableAliases: false
+disableHugoGeneratorInject: true
+disableKinds: []
+enableRobotsTXT: true
+enableGitInfo: true
+enableEmoji: true
+relativeURLs: false
+uglyURLs: false
+
+# Minification
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+
+# Image processing
+imaging:
+  quality: 85
+  resampleFilter: "lanczos"
+  hint: "photo"
+
+# Markup configuration
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    highlight:
+      style: "github-dark"
+      lineNos: false
+      codeFences: true
+      guessSyntax: true
+      hl_Lines: ""
+      lineNumbersInTable: true
+      noClasses: false
+      tabWidth: 2
+
+# Permalinks
+permalinks:
+  blog: "/blog/:year/:month/:day/:slug/"
+  features: "/features/:slug/"
+
+# Taxonomies
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  author: "authors"
+
+# Site parameters
+params:
+  # Site identity
+  author: "VoidRunner Team"
+  description: "Deploy AI applications in minutes, not hours. VoidRunner's AI-powered platform automatically detects and sets up runtime environments from just your code."
+  keywords: ["AI", "serverless", "development platform", "deployment", "containers", "kubernetes"]
+  
+  # Logo and branding
+  logo: "/images/logo.svg"
+  logo_dark: "/images/logo-dark.svg"
+  favicon: "/images/favicon.ico"
+  
+  # Contact information
+  email: "hello@voidrunner.dev"
+  phone: ""
+  address: ""
+  
+  # Social media
+  social:
+    github: "https://github.com/voidrunnerhq"
+    twitter: "https://twitter.com/voidrunnerhq"
+    linkedin: ""
+    discord: "https://discord.gg/voidrunner"
+  
+  # Analytics
+  google_analytics: ""
+  google_tag_manager: ""
+  
+  # Features
+  dark_mode: true
+  search: true
+  code_copy_button: true
+  
+  # Navigation
+  nav_button:
+    enable: true
+    label: "Start Free"
+    link: "https://app.voidrunner.dev/signup"
+  
+  # Footer
+  footer:
+    content: "Deploy smarter, not harder. VoidRunner's AI-powered platform eliminates infrastructure complexity."
+    copyright: "© 2025 VoidRunner. All rights reserved."
+
+# Menu configuration
+menu:
+  main:
+    - name: "Features"
+      url: "/features/"
+      weight: 1
+    - name: "Pricing"
+      url: "/pricing/"
+      weight: 2
+    - name: "Docs"
+      url: "/docs/"
+      weight: 3
+    - name: "Blog"
+      url: "/blog/"
+      weight: 4
+    - name: "Contact"
+      url: "/contact/"
+      weight: 5
+
+  footer:
+    - name: "Privacy Policy"
+      url: "/privacy/"
+      weight: 1
+    - name: "Terms of Service"
+      url: "/terms/"
+      weight: 2
+    - name: "Status"
+      url: "https://status.voidrunner.dev"
+      weight: 3
+
+# Security
+security:
+  exec:
+    allow: ["^dart-sass-embedded$", "^git$", "^go$", "^npx$", "^postcss$"]
+  funcs:
+    getenv: ["^HUGO_", "^CI$"]
+
+# Privacy
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: false
+    respectDoNotTrack: true
+    anonymizeIP: true
+  instagram:
+    disable: true
+  x:
+    disable: false
+    enableDNT: true
+  vimeo:
+    disable: true
+  youtube:
+    disable: false
+    privacyEnhanced: true

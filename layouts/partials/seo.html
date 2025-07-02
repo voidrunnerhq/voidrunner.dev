@@ -1,0 +1,90 @@
+{{- $title := .Title -}}
+{{- $description := .Params.description | default .Site.Params.description -}}
+{{- $canonical := .Permalink -}}
+{{- $image := .Params.image | default "/images/og-image.png" | absURL -}}
+
+<!-- Basic Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ $description }}">
+<meta name="keywords" content="{{ delimit .Site.Params.keywords "," }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+
+<!-- Title -->
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ $title }} | {{ .Site.Title }}{{ end }}</title>
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ $canonical }}">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $image }}">
+{{- with .Site.Params.social.twitter -}}
+<meta name="twitter:site" content="@{{ . }}">
+<meta name="twitter:creator" content="@{{ . }}">
+{{- end -}}
+
+<!-- Additional Meta Tags -->
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#3B82F6">
+<meta name="msapplication-TileColor" content="#3B82F6">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ if .IsHome }}Organization{{ else }}WebPage{{ end }}",
+  {{- if .IsHome -}}
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ "/images/logo.svg" | absURL }}",
+  "description": "{{ $description }}",
+  "founder": {
+    "@type": "Person",
+    "name": "VoidRunner Team"
+  },
+  "sameAs": [
+    {{- with .Site.Params.social.github -}}"{{ . }}",{{- end -}}
+    {{- with .Site.Params.social.twitter -}}"{{ . }}",{{- end -}}
+    {{- with .Site.Params.social.linkedin -}}"{{ . }}"{{- end -}}
+  ]
+  {{- else -}}
+  "name": "{{ $title }}",
+  "url": "{{ $canonical }}",
+  "description": "{{ $description }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  }
+  {{- end -}}
+}
+</script>
+
+<!-- Preconnect to external domains -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">

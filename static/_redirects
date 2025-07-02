@@ -1,0 +1,4 @@
+/app/* https://app.voidrunner.dev/:splat 302
+/app https://app.voidrunner.dev 302
+/docs/* https://docs.voidrunner.dev/:splat 302
+/status https://status.voidrunner.dev 302
